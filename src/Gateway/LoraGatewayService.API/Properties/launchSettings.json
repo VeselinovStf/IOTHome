@@ -1,0 +1,46 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "LORA_GATEWAY_DB_CONNECTION_STRING": "mongodb://root:example@localhost:27017",
+        "LORA_GATEWAY_DB_DATABASE_NAME": "LoraGateway",
+        "LORA_GATEWAY_DEVECE_COLLECTION_NAME": "Devices",
+        "LORA_GATEWAY_MQ_HOST_NAME": "localhost",
+        "LORA_GATEWAY_MQ_ROUTING_KEY": "lora",
+        "LORA_GATEWAY_MQ_USER_NAME": "guest",
+        "LORA_GATEWAY_MQ_PASSWORD": "guest",
+        "LORA_GATEWAY_MQ_PORT": "5672",
+        "LOG_FILE_PATH": "Logs/log.txt"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5142"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "LORA_GATEWAY_DB_CONNECTION_STRING": "mongodb://root:example@localhost:27017",
+        "LORA_GATEWAY_DB_DATABASE_NAME": "LoraGateway",
+        "LORA_GATEWAY_DEVECE_COLLECTION_NAME": "Devices",
+        "LORA_GATEWAY_MQ_HOST_NAME": "localhost",
+        "LORA_GATEWAY_MQ_ROUTING_KEY": "lora",
+        "LORA_GATEWAY_MQ_USER_NAME": "guest",
+        "LORA_GATEWAY_MQ_PASSWORD": "guest",
+        "LORA_GATEWAY_MQ_PORT": "5672",
+        "LOG_FILE_PATH": "Logs/log.txt"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7223;http://localhost:5142"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true
+    }
+  }
+}

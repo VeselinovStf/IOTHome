@@ -1,0 +1,31 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  iot-home:
+    image: "iot-home"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+       - EMAIL_SENDER_API_KEY=${EMAIL_SENDER_API_KEY}
+       - EMAIL_SENDER_FROM_EMAIL=${EMAIL_SENDER_FROM_EMAIL}
+       - EMAIL_SENDER_FROM_NAME_EMAIL=${EMAIL_SENDER_FROM_NAME_EMAIL}
+       - LORA_GATEWAY_MQ_HOST_NAME=${LORA_GATEWAY_MQ_HOST_NAME}
+       - LORA_GATEWAY_MQ_ROUTING_KEY=${LORA_GATEWAY_MQ_ROUTING_KEY}
+       - LORA_GATEWAY_MQ_USER_NAME=${LORA_GATEWAY_MQ_USER_NAME}
+       - LORA_GATEWAY_MQ_PASSWORD=${LORA_GATEWAY_MQ_PASSWORD}
+       - LORA_GATEWAY_MQ_PORT=${LORA_GATEWAY_MQ_PORT}
+    container_name: iot-home
+    ports:
+    - "4369:4369"
+    - "5671:5671"
+    - "5672:5672"
+    - "25672:25672"
+    - "15671:15671"
+    - "15672:15672"
+    hostname: iot-home
+    networks:
+      - lora
+networks:
+  lora:

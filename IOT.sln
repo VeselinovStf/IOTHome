@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{08A57971-0A9E-4E9D-AB15-31F0B1E19770}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{775939EF-2D98-4EF7-8B3F-9EE28747FF4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Listener", "Listener", "{928863EE-3A01-494D-B089-24FB57BD55CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{9580885A-7C8F-401C-B119-E2FCA706CDC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoraGatewayService.API", "src\Gateway\LoraGatewayService.API\LoraGatewayService.API.csproj", "{D5916BE3-1D46-4D91-9397-8AD7202ABEF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOTHome", "src\Listener\IOTHome\IOTHome.csproj", "{37644562-1E9F-4668-A20F-3A8F168E529E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLogger", "src\Utiliry\AppLogger\AppLogger.csproj", "{305650E8-276D-4C39-8035-E1106C1E91D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailClient", "src\Utiliry\EmailClient\EmailClient.csproj", "{48ECF713-C02D-44ED-8318-6C95EFE1AAB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQuery", "src\Utiliry\MessageQuery\MessageQuery.csproj", "{9C36A12F-9AA4-4CAE-AA94-78F183B6C671}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64678ED4-372C-45C7-92E0-F46B8902A838}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.raspi.dev.yaml = docker-compose.raspi.dev.yaml
+		docker-compose.win.dev.yaml = docker-compose.win.dev.yaml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dockerfiles", "dockerfiles", "{09162352-D36F-40BA-9597-B230B6133701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateway", "gateway", "{848C1653-2985-4ADC-9999-948CFB2A7084}"
+	ProjectSection(SolutionItems) = preProject
+		dockerfiles\gateway\Dockerfile = dockerfiles\gateway\Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "listener", "listener", "{1F2569D2-96D4-457B-937C-ACA0FF70E13C}"
+	ProjectSection(SolutionItems) = preProject
+		dockerfiles\listener\Dockerfile = dockerfiles\listener\Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5916BE3-1D46-4D91-9397-8AD7202ABEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5916BE3-1D46-4D91-9397-8AD7202ABEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5916BE3-1D46-4D91-9397-8AD7202ABEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5916BE3-1D46-4D91-9397-8AD7202ABEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37644562-1E9F-4668-A20F-3A8F168E529E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37644562-1E9F-4668-A20F-3A8F168E529E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37644562-1E9F-4668-A20F-3A8F168E529E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37644562-1E9F-4668-A20F-3A8F168E529E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305650E8-276D-4C39-8035-E1106C1E91D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305650E8-276D-4C39-8035-E1106C1E91D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305650E8-276D-4C39-8035-E1106C1E91D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305650E8-276D-4C39-8035-E1106C1E91D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48ECF713-C02D-44ED-8318-6C95EFE1AAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48ECF713-C02D-44ED-8318-6C95EFE1AAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48ECF713-C02D-44ED-8318-6C95EFE1AAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48ECF713-C02D-44ED-8318-6C95EFE1AAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C36A12F-9AA4-4CAE-AA94-78F183B6C671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C36A12F-9AA4-4CAE-AA94-78F183B6C671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C36A12F-9AA4-4CAE-AA94-78F183B6C671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C36A12F-9AA4-4CAE-AA94-78F183B6C671}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{775939EF-2D98-4EF7-8B3F-9EE28747FF4F} = {08A57971-0A9E-4E9D-AB15-31F0B1E19770}
+		{928863EE-3A01-494D-B089-24FB57BD55CA} = {08A57971-0A9E-4E9D-AB15-31F0B1E19770}
+		{9580885A-7C8F-401C-B119-E2FCA706CDC1} = {08A57971-0A9E-4E9D-AB15-31F0B1E19770}
+		{D5916BE3-1D46-4D91-9397-8AD7202ABEF9} = {775939EF-2D98-4EF7-8B3F-9EE28747FF4F}
+		{37644562-1E9F-4668-A20F-3A8F168E529E} = {928863EE-3A01-494D-B089-24FB57BD55CA}
+		{305650E8-276D-4C39-8035-E1106C1E91D0} = {9580885A-7C8F-401C-B119-E2FCA706CDC1}
+		{48ECF713-C02D-44ED-8318-6C95EFE1AAB6} = {9580885A-7C8F-401C-B119-E2FCA706CDC1}
+		{9C36A12F-9AA4-4CAE-AA94-78F183B6C671} = {9580885A-7C8F-401C-B119-E2FCA706CDC1}
+		{848C1653-2985-4ADC-9999-948CFB2A7084} = {09162352-D36F-40BA-9597-B230B6133701}
+		{1F2569D2-96D4-457B-937C-ACA0FF70E13C} = {09162352-D36F-40BA-9597-B230B6133701}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34475AC8-5816-40E0-8059-65ADC98877E1}
+	EndGlobalSection
+EndGlobal
