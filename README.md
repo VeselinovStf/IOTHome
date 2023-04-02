@@ -1,6 +1,6 @@
 # IOT Home Projects
 
-### Current Concept
+## Current Concept
 
 - Place IOT device on something that you nead to track.
 - When a IOT device is moved he sends a package to Helium Network.
@@ -9,7 +9,7 @@
 - IOTHome listens for messages from MQ.
 - When IOTHome get the message, sends EMail that notifies that device is sending packages.
 
-### Content
+## Content
 
 - dockerfiles 
     - gateway - dockerfile for gateway
@@ -27,27 +27,12 @@
 - docker-compose.raspi.dev.yaml - dev file for raspi environment
 - .env - all projects environment 
 
-### Dev Environment
+## Dev Environment
 
 - Windows
     - docker-compose --env-file .env -f docker-compose.win.dev.yaml up --build
 - Raspi
     - docker-compose --env-file .env -f docker-compose.raspi.dev.yaml up --build
-
-## Lorawan .NET Gateway Service
-
-- Parses request from LoraWan network and save it to database
-
-## IOTHome
-
-- Listenes for request messages from MQ, on new message send Email
-
-### Dev Environment
-
-- Windows
-    - docker-compose -f docker-compose.win.dev.yaml up
-- Raspi
-    - docker-compose -f docker-compose.raspi.dev.yaml up
 
 ## Environment Variables
 
@@ -66,4 +51,24 @@ LORA_GATEWAY_DB_DATABASE_NAME=LoraGateway
 LORA_GATEWAY_DEVECE_COLLECTION_NAME=Devices
 LOG_FILE_PATH=Logs/log.txt
 LORA_INTEGRATION_PORT=8090
+```
+
+## Test
+
+### Using Postman 
+
+[POST] http://localhost:8090/api/helium 
+
+```
+{
+    "asd":"asd2"
+}
+```
+
+### Result 
+
+```
+lora-gateway              |       [ INFO ][ 04/02/2023 12:56:20 ] : Message Inserted!
+lora-gateway              |       [ INFO ][ 04/02/2023 12:56:20 ] : Message Send To MQ! : 64297b745129d8c2bf77cfb0
+iot-home                  |       Email Send To: chofexx@gmail.com :
 ```
