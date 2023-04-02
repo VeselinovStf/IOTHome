@@ -15,7 +15,7 @@ builder.Services.AddSingleton<DBSetting>();
 var app = builder.Build();
 app.UseHttpsRedirection();
 
-app.MapPost("api/integration", async (
+app.MapPost("api/helium", async (
     HttpRequest request,
     IAppLogger<StartUp> _logger,
     IMessageProducer messageProducer,

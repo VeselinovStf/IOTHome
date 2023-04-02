@@ -1,19 +1,55 @@
 # IOT Home Projects
 
-# Lorawan Gateway Service
+### Current Concept
+
+- Place IOT device on something that you nead to track.
+- When a IOT device is moved he sends a package to Helium Network.
+- Helium Network sends this package to LoraGatewayService.
+- LoraGatewayService saves this package to DB and makes MQ request.
+- IOTHome listens for messages from MQ.
+- When IOTHome get the message, sends EMail that notifies that device is sending packages.
+
+### Content
+
+- dockerfiles 
+    - gateway - dockerfile for gateway
+    - listener - dockerfile for listener
+- src
+    - Gateway
+        - LoraGatewayService.API - Gateway service between External Lorawan Network and local/server services
+    - Listener
+        - IOTHOME - Listenes for MQ messages and does an action
+    - Utility
+        - AppLogger - Light weight application loger, consists of console and file logger
+        - EmailClient - SendGrid Client that sends emails
+        - MessageQuery - MQ Library that does the send MQ messages
+- docker-compose.win.dev.yaml - dev file for windows environment
+- docker-compose.raspi.dev.yaml - dev file for raspi environment
+- .env - all projects environment 
+
+### Dev Environment
+
+- Windows
+    - docker-compose --env-file .env -f docker-compose.win.dev.yaml up --build
+- Raspi
+    - docker-compose --env-file .env -f docker-compose.raspi.dev.yaml up --build
 
 ## Lorawan .NET Gateway Service
 
 - Parses request from LoraWan network and save it to database
 
-## Dev Environment
+## IOTHome
+
+- Listenes for request messages from MQ, on new message send Email
+
+### Dev Environment
 
 - Windows
     - docker-compose -f docker-compose.win.dev.yaml up
 - Raspi
     - docker-compose -f docker-compose.raspi.dev.yaml up
 
-### Environment Variables
+## Environment Variables
 
 ```
 EMAIL_SENDER_API_KEY=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
